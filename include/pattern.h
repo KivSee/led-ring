@@ -1,0 +1,20 @@
+# ifndef PATTERNS_H
+# define PATTERNS_H
+
+#include <leds.h>
+#include <FastLED.h>
+
+enum PatternType {
+  PATTERN_TYPE_DOT,
+  PATTERN_TYPE_LOADER,
+  PATTERN_TYPE_ADJACENT_DOTS,
+  PATTERN_TYPE_UP_DOWN_DOTS,
+  PATTERN_TYPE_RIGHT_LEFT_DOTS,
+  PATTERN_TYPE_SNAKE_CYCLE,
+  PATTERN_TYPE_4_DOTS,
+  PATTERN_TYPE_PIXEL_ALTERNATING,
+};
+
+void pattern(PatternType patternType, CHSV leds[NUM_LEDS]);
+
+#endif // PATTERNS_H
